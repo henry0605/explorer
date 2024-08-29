@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer戶外裝備</title>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <header id="topbar">
+        <div class="navbar">
+            <!-- 漢堡按鈕 -->
+
+            <!-- 選單列 -->
+            <nav class="navigation">
+                <!-- main btn | ul.menu>li*6>a -->
+                <ul class="menu">
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="member"><img src="./image/User.png" alt=""></a></li>
+                    
+                    <!-- 漢堡按鈕 -->
+                    <button class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <section id="banner">
+            <img src="./image/EACE5657-656B-4DEC-860D-3EE2E36CADB71.jpg" id="montain">
+            <img src="./image/road.png" id="road">
+            <h2 id="text">In nature,<br>we find a peace and freedom <br> that no other place can offer.</h2>
+        </section>
+
+        <script>
+            let montain = document.getElementById("montain");
+            let text = document.getElementById("text");
+
+            window.addEventListener('scroll', function () {
+                // Stock valeur scrollY dans une variable à chaque fois qu'on scroll
+                let value = window.scrollY;
+                console.log(value);
+
+                text.style.transform = `translateY(${value}px)`;
+
+            })
+        </script>
+    </main>
+
+
+
+
+
+</body>
+
+</html>
