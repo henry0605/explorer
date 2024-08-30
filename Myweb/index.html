@@ -23,13 +23,13 @@
                     <li><a href="#contact">CONTACT</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="member"><img src="./image/User.png" alt=""></a></li>
-                    
-                    <!-- 漢堡按鈕 -->
-                    <button class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </button>
+                    <li><a href="hamburger">
+                        <button class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </button></a></li>
+
                 </ul>
             </nav>
         </div>
@@ -39,12 +39,15 @@
         <section id="banner">
             <img src="./image/EACE5657-656B-4DEC-860D-3EE2E36CADB71.jpg" id="montain">
             <img src="./image/road.png" id="road">
-            <h2 id="text">In nature,<br>we find a peace and freedom <br> that no other place can offer.</h2>
+            <h2 id="title"><span style="color: #C97200;">In nature,</span><br>
+                we find a peace and freedom <br> that no other place can offer.</h2>
+            <h3 id="title1">- William Wordsworth</h3>
         </section>
 
         <script>
             let montain = document.getElementById("montain");
-            let text = document.getElementById("text");
+            let text = document.getElementById("title");
+            let text1 = document.getElementById("title1");
 
             window.addEventListener('scroll', function () {
                 // Stock valeur scrollY dans une variable à chaque fois qu'on scroll
@@ -52,8 +55,11 @@
                 console.log(value);
 
                 text.style.transform = `translateY(${value}px)`;
+                text1.style.transform = `translateY(${value}px)`;     
 
             })
+            
+
         </script>
     </main>
 
