@@ -70,7 +70,7 @@ body {
     /* 控制父層的外距 */
     padding: 10px;
     justify-content: flex-end;
-    
+
 }
 
 .navigation .menu a {
@@ -80,19 +80,23 @@ body {
     line-height: 1;
     margin: 0 20px;
     /* 控制子層的外距 */
-    text-decoration: none; /* 移除文字底線 */
-    
+    text-decoration: none;
+    /* 移除文字底線 */
+
 }
 
 .navigation .menu li {
     display: flex;
-    align-items: center; /* 使圖片和文字在列表項內垂直居中對齊 */
+    align-items: center;
+    /* 使圖片和文字在列表項內垂直居中對齊 */
 }
 
 .navigation .menu img {
     height: 1.5rem;
-    width: auto; /* 保持圖片比例 */
-    vertical-align: middle; /* 將圖片與文字垂直對齊 */
+    width: auto;
+    /* 保持圖片比例 */
+    vertical-align: middle;
+    /* 將圖片與文字垂直對齊 */
 }
 
 /* 漢堡按鈕的基礎樣式 */
@@ -101,8 +105,10 @@ body {
     border: none;
     cursor: pointer;
     display: flex;
-    flex-direction: column; /* 三條垂直排列 */
-    justify-content: space-between;/* 子元素均勻地分佈 */
+    flex-direction: column;
+    /* 三條垂直排列 */
+    justify-content: space-between;
+    /* 子元素均勻地分佈 */
     width: 25px;
     height: 1.1rem;
 }
@@ -153,7 +159,7 @@ body {
     color: #FFF;
     left: 2%;
     top: 100px;
-    font-size: 5.5rem;
+    font-size: 5rem;
     z-index: 1;
 
 }
@@ -163,7 +169,7 @@ body {
     color: #FFF;
     right: 10%;
     margin-bottom: -5%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     z-index: 1;
 
 }
@@ -172,6 +178,79 @@ body {
     z-index: 2;
 
 }
+
+/* 跑馬燈logo區 */
+#logo {
+    display: flex;
+    margin: 4%;
+    justify-content: space-between;
+    /* 控制照片之間的間距 */
+    gap: 45px;
+    /* 照片之間的空隙 */
+}
+
+#logo img {
+    width: 80px;
+    border-radius: 100px;
+}
+
+/* 租裝備日期區 */
+#date {
+    background-color: #CCCFBE;
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    width:100%;
+    height: 200px;
+    color: #5C3C12;
+    justify-content: space-evenly;
+}
+
+#date > *{
+    margin: 0 -200px;
+
+}
+
+.text h1 {
+    padding-top: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.text h3 {
+    font-size: 1.2rem;
+    padding-left: 2px;
+    line-height: 1.3;
+}
+
+.rentDate h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-top: 3px;
+}
+
+.customDate {
+    width: 100%;
+    height: 45%;
+    background-color: #CCCFBE;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;/* 清除其他邊框 */
+    border-bottom: 2px solid #5C3C12;/* 只保留底部藍色邊框 */
+    color: #5C3C12;
+}
+
+#confirm{
+    width: 8%;
+    height: 20%;
+    color: #5C3C12;
+    background-color: #CCCFBE;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #5C3C12;
+}
+
 
 /* 卷軸 */
 html::-webkit-scrollbar {
