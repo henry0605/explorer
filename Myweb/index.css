@@ -63,6 +63,13 @@ body {
     min-height: 1500px;
 }
 
+/* 標題共用區 */
+.title{
+    color: #C97200;
+    margin-left: 1%;
+    font-size: 3.5rem;
+}
+
 /* navbar */
 .navigation .menu {
     display: flex;
@@ -181,33 +188,34 @@ body {
 
 /* 跑馬燈logo區 */
 #logo {
-    display: flex;
     margin: 4%;
-    justify-content: space-between;
+    justify-content: flex-start;
     /* 控制照片之間的間距 */
-    gap: 45px;
+    gap: 3%;
     /* 照片之間的空隙 */
+    display: flex;
 }
 
-#logo img {
-    width: 80px;
-    border-radius: 100px;
-}
+#logo img {}
+
+
 
 /* 租裝備日期區 */
 #date {
     background-color: #CCCFBE;
     display: flex;
-    justify-content: center; /* 水平置中 */
-    align-items: center; /* 垂直置中 */
-    width:100%;
+    justify-content: center;
+    /* 水平置中 */
+    align-items: center;
+    /* 垂直置中 */
+    width: 100%;
     height: 200px;
     color: #5C3C12;
     justify-content: space-evenly;
 }
 
-#date > *{
-    margin: 0 -200px;
+#date>* {
+    margin: 0 -230px;
 
 }
 
@@ -236,12 +244,15 @@ body {
     background-color: #CCCFBE;
     font-size: 1.1rem;
     font-weight: 600;
-    border: none;/* 清除其他邊框 */
-    border-bottom: 2px solid #5C3C12;/* 只保留底部藍色邊框 */
+    border: none;
+    /* 清除其他邊框 */
+    border-bottom: 2px solid #5C3C12;
+    /* 只保留底部藍色邊框 */
     color: #5C3C12;
+    cursor: pointer;
 }
 
-#confirm{
+#confirm {
     width: 8%;
     height: 20%;
     color: #5C3C12;
@@ -249,8 +260,13 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     border: 2px solid #5C3C12;
+    cursor: pointer;
+    transition: 0.6;
 }
 
+#confirm:hover {
+    background-color: #a9ae9a;
+}
 
 /* 卷軸 */
 html::-webkit-scrollbar {
