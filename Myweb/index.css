@@ -66,7 +66,7 @@ body {
 /* 標題共用區 */
 .title{
     color: #C97200;
-    margin-left: 1%;
+    margin: 3% 0% 2% 1%;
     font-size: 3.5rem;
 }
 
@@ -196,9 +196,6 @@ body {
     display: flex;
 }
 
-#logo img {}
-
-
 
 /* 租裝備日期區 */
 #date {
@@ -267,6 +264,54 @@ body {
 #confirm:hover {
     background-color: #a9ae9a;
 }
+
+/* shop區 */
+#shop img{
+    position: absolute;
+    width: 65%;
+    height: 75%;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+.sawtooth{
+    position: relative; /* 确保子元素的绝对定位基于这个容器 */
+    width: 45%;
+    height: 450px; 
+    margin: 6% 4% 0 0; 
+}
+.sawtooth1{
+    width: 100%;
+    height: 100%;
+    background-color: #A0A589; /* 背景颜色，根据需要调整 */
+    margin: 4% 4% 0 0;
+    clip-path: polygon(
+        100% 0%, 95% 5%, 100% 10%, 95% 15%, 100% 20%, 95% 25%, 
+        100% 30%, 95% 35%, 100% 40%, 95% 45%, 100% 50%, 95% 55%, 
+        100% 60%, 95% 65%, 100% 70%, 95% 75%, 100% 80%, 95% 85%, 
+        100% 90%, 95% 95%, 100% 100%, 0% 100%, 0% 0%
+    );
+    position: absolute; /* 使用绝对定位 */
+    margin-left: 108%;
+    z-index: 1;
+}
+.sawtooth2 {
+    width: 100%;
+    height: 100%;
+    background-color: #CCCFBE; 
+    margin: 4% 4% 0 0;
+    clip-path: polygon(
+        100% 0%, 95% 5%, 100% 10%, 95% 15%, 100% 20%, 95% 25%, 
+        100% 30%, 95% 35%, 100% 40%, 95% 45%, 100% 50%, 95% 55%, 
+        100% 60%, 95% 65%, 100% 70%, 95% 75%, 100% 80%, 95% 85%, 
+        100% 90%, 95% 95%, 100% 100%, 0% 100%, 0% 0%
+    );
+    position: absolute; /* 使用绝对定位 */
+    bottom: -17px;
+    margin-left: 109%;
+    z-index: 2;
+}
+
 
 /* 卷軸 */
 html::-webkit-scrollbar {
