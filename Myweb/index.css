@@ -22,6 +22,7 @@
     font-family: 'poppins', sans-serif;
 }
 
+
 /* 重置字體 */
 body {
     font-family:
@@ -61,12 +62,15 @@ img {
 body {
     background-color: #F3F4EC;
     min-height: 1500px;
+    max-width: 1440px; /* 設定最大寬度為 1440px */
+    margin: 0 auto; /* 讓內容居中顯示 */
+    padding: 0 20px; /* 添加內邊距確保內容不貼邊 */
 }
 
 /* 標題共用區 */
-.title{
+.title {
     color: #C97200;
-    margin: 3% 0% 2% 1%;
+    margin: 5% 0% 2% 0%;
     font-size: 3.5rem;
 }
 
@@ -166,7 +170,7 @@ body {
     color: #FFF;
     left: 2%;
     top: 100px;
-    font-size: 5rem;
+    font-size: 5.5rem;
     z-index: 1;
 
 }
@@ -174,8 +178,7 @@ body {
 #title1 {
     position: absolute;
     color: #FFF;
-    right: 10%;
-    margin-bottom: -5%;
+    right: 1%;
     font-size: 1.2rem;
     z-index: 1;
 
@@ -266,87 +269,107 @@ body {
 }
 
 /* shop區 */
-#shop{
+#shop {
     position: relative;
     width: 100%;
+    height: 750px;
 }
-#shopPic{
+
+#shopPic {
     position: absolute;
     width: 65%;
-    height: 100%;
+    height: 80%;
     left: 0;
     object-fit: cover;
-    pointer-events: none;
     z-index: 1;
 }
-.sawtooth{
-    position: relative; /* 确保子元素的绝对定位基于这个容器 */
+
+.sawtooth {
+    position: relative;
+    /* 确保子元素的绝对定位基于这个容器 */
     width: 100%;
-    height: 550px;
+    height: 500px;
 }
-.sawtooth1{
-    width: 45%;
-    height: 110%;
+
+.sawtooth1 {
+    width: 48%;
+    height: 100%;
     background-color: #A0A589;
     left: 50%;
-    top:14%;
-    clip-path: polygon(
-        100% 0%, 95% 5%, 100% 10%, 95% 15%, 100% 20%, 95% 25%, 
-        100% 30%, 95% 35%, 100% 40%, 95% 45%, 100% 50%, 95% 55%, 
-        100% 60%, 95% 65%, 100% 70%, 95% 75%, 100% 80%, 95% 85%, 
-        100% 90%, 95% 95%, 100% 100%, 0% 100%, 0% 0%
-    );
+    top: 14%;
+    clip-path: polygon(100% 0%, 95% 5%, 100% 10%, 95% 15%, 100% 20%, 95% 25%,
+            100% 30%, 95% 35%, 100% 40%, 95% 45%, 100% 50%, 95% 55%,
+            100% 60%, 95% 65%, 100% 70%, 95% 75%, 100% 80%, 95% 85%,
+            100% 90%, 95% 95%, 100% 100%, 0% 100%, 0% 0%);
     position: absolute;
     z-index: 2;
 }
+
 .sawtooth2 {
-    width: 45%;
-    height: 110%;
-    background-color: #CCCFBE; 
+    width: 48%;
+    height: 100%;
+    background-color: #CCCFBE;
     left: 50.5%;
-    top:12%;
-    clip-path: polygon(
-        100% 0%, 95% 5%, 100% 10%, 95% 15%, 100% 20%, 95% 25%, 
-        100% 30%, 95% 35%, 100% 40%, 95% 45%, 100% 50%, 95% 55%, 
-        100% 60%, 95% 65%, 100% 70%, 95% 75%, 100% 80%, 95% 85%, 
-        100% 90%, 95% 95%, 100% 100%, 0% 100%, 0% 0%
-    );
+    top: 12%;
+    clip-path: polygon(100% 0%, 95% 5%, 100% 10%, 95% 15%, 100% 20%, 95% 25%,
+            100% 30%, 95% 35%, 100% 40%, 95% 45%, 100% 50%, 95% 55%,
+            100% 60%, 95% 65%, 100% 70%, 95% 75%, 100% 80%, 95% 85%,
+            100% 90%, 95% 95%, 100% 100%, 0% 100%, 0% 0%);
     position: absolute;
     z-index: 3;
 }
-#types{
+
+#types {
     position: absolute;
-    top: 20%; 
+    top: 20%;
     left: 54%;
     z-index: 4;
-    color: #5C3C12; /* 标题文字颜色 */
-    font-size: 2rem;
+    color: #5C3C12;
+    /* 标题文字颜色 */
+    font-size: 1.5rem;
     white-space: nowrap;
 }
 
 #gearContainer {
     position: absolute;
     display: flex;
-    justify-content: space-between;
-    width: 20%;
-    margin-left: 60%;
+    flex-direction: column;
+    left: 58%;
+    top: 35%;
+    width: 34%;
+    gap: 22px;
     z-index: 5;
 }
 
-#gearBtn1, #gearBtn2 {
+.gearRow {
     display: flex;
     justify-content: space-between;
-    margin-top: 50%;
-    flex-direction: column;
-    flex-basis: 20%;
+    /* 讓每行內的兩個項目水平排列 */
     width: 100%;
-    gap: 35px;
-
+    /* 控制每行的寬度 */
 }
 
-#gearBtn1 img, #gearBtn2 img {
-    width: 80px;
-    height: auto;
+.gearItem {
+    display: flex;
+    flex-direction: row;
+    /* 讓圖片和文字垂直排列 */
+    align-items: center;
+    /* 水平居中對齊 */
+    width: 50%;
+    /* 控制每個項目的寬度，使其占據行的一半 */
+    gap:6px;
+}
+
+.gearItem img {
+    width: 25%;
+    /* 調整圖片大小 */
+}
+
+.gearItem h3 {
+    color: #5C3C12;
+    text-align: center;
+    font-size: 1rem;
+    
 }
 
 
@@ -368,5 +391,5 @@ html::-webkit-scrollbar-thumb {
 
 html {
     scrollbar-width: thin;
-    scrollbar-color: #85942D #ffff;
+    scrollbar-color: #c97200 #ffff;
 }
