@@ -177,7 +177,8 @@ body {
 #title1 {
     position: absolute;
     color: #FFF;
-    right: 1%;
+    right: 4%;
+    top:60%;
     font-size: 1.2rem;
     z-index: 1;
 
@@ -359,7 +360,7 @@ body {
 }
 
 .gearItem img {
-    width: 80px;
+    width: 85px;
     cursor: pointer;
 }
 
@@ -431,7 +432,7 @@ body {
     font-size: 24px;
     letter-spacing: 12px;
     text-align: center;
-    padding-top:55%
+    padding-top:40%
 }
 .gearNews{
     position: relative;
@@ -439,6 +440,7 @@ body {
     width: 80%;
     left: 12%;
     top: 14%;
+    border: 2px solid red;
     
 }
 .gearNews1{
@@ -451,6 +453,29 @@ body {
     padding-right: 2%;
     object-fit: cover;
 }
+.text-section2{
+    width: 50%;
+}
+.text-section2 h2{
+    color: #5C3C12;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+}
+.text-section2 p{
+    color: #5C3C12;
+    font-size: 1.2rem;
+    line-height: 2.5;
+    font-weight: 550;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-top:2%;
+}
+#basecamp{
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
 
 
 
