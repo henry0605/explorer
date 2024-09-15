@@ -63,7 +63,8 @@ body {
     background-color: #F3F4EC;
     /* min-height: 1500px;
     max-width: 1440px;  */
-    margin: 0 auto; /* 讓內容居中顯示 */
+    margin: 0 auto;
+    /* 讓內容居中顯示 */
 }
 
 /* 標題共用區 */
@@ -169,7 +170,7 @@ body {
     color: #FFF;
     left: 2%;
     top: 100px;
-    font-size: 5.5rem;
+    font-size: 7rem;
     z-index: 1;
 
 }
@@ -178,7 +179,7 @@ body {
     position: absolute;
     color: #FFF;
     right: 4%;
-    top:60%;
+    top: 50%;
     font-size: 1.2rem;
     z-index: 1;
 
@@ -186,6 +187,19 @@ body {
 
 #road {
     z-index: 2;
+
+}
+
+@media(max-width:1440px) {
+    #title {
+        font-size: 5.5rem;
+    }
+
+    #title1 {
+        top: 58%;
+        font-size: 1rem;
+        right: 1%;
+    }
 
 }
 
@@ -272,7 +286,8 @@ body {
 #shop {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
+    border: 2px solid red;
 }
 
 #shopPic {
@@ -334,7 +349,7 @@ body {
     display: flex;
     flex-direction: column;
     left: 58%;
-    top: 20%;
+    top: 22%;
     width: 34%;
     gap: 22px;
     z-index: 5;
@@ -356,7 +371,7 @@ body {
     /* 水平居中對齊 */
     width: 50%;
     /* 控制每個項目的寬度，使其占據行的一半 */
-    gap:6px;
+    gap: 6px;
 }
 
 .gearItem img {
@@ -368,117 +383,256 @@ body {
     color: #5C3C12;
     text-align: center;
     font-size: 1rem;
-    
+
+}
+
+@media(max-width:1440px) {
+    .gearItem img {
+        width: 58px;
+    }
+
+    #types {
+        font-size: 1.7rem;
+    }
 }
 
 /* NEWS區 */
 #news {
     position: relative;
     width: 100%;
-    height: 120vh;
+    height: 140vh;
+    border: 2px solid red;
 }
-.newsArea{
+
+.newsArea {
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: 83%;
     background-color: #CCCFBE;
     left: 7%;
     z-index: 1;
 }
-.carousel{
+
+.carousel {
     position: relative;
     z-index: 2;
     width: 80%;
     left: 12%;
-    top: 10%;
+    top: 6%;
+    border: 2px solid red;
 }
-.carousel-1{
+
+.carousel-1 {
     display: flex;
 }
-.content-wrapper{
+
+.content-wrapper {
     display: flex;
 }
-.text-section{
+
+.text-section {
     width: 30%;
 }
-.text-section h2{
+
+.text-section h2 {
     color: #5C3C12;
     font-weight: 550;
     letter-spacing: 1.5px;
     font-size: 1.8rem;
 }
-.text-section p{
+
+.text-section p {
     color: #5C3C12;
     font-size: 1.2rem;
-    line-height: 2.5;
+    line-height: 2;
     font-weight: 550;
     letter-spacing: 1px;
     text-align: justify;
-    margin-top:10%;
+    margin-top: 10%;
 }
-#fuji{
+
+#fuji {
     font-size: 3rem;
 }
 
-.newsImg img{
+.newsImg img {
     width: 100%;
     max-width: 1100px;
     height: 95%;
     padding-left: 8%;
+    object-fit: cover;
 }
 
-.dots{
+.dots {
     color: #5C3C12;
     font-size: 24px;
     letter-spacing: 12px;
     text-align: center;
-    padding-top:40%
+    padding-top: 55%
 }
-.gearNews{
+
+.gearNews {
     position: relative;
     z-index: 2;
     width: 80%;
     left: 12%;
-    top: 14%;
+    top: 12%;
     border: 2px solid red;
-    
+
 }
-.gearNews1{
+
+.gearNews1 {
     display: flex;
 }
 
-.gearNews img{
+.gearNews img {
     width: 20%;
     height: 28vh;
     padding-right: 2%;
     object-fit: cover;
 }
-.text-section2{
+
+.text-section2 {
     width: 50%;
 }
-.text-section2 h2{
+
+.text-section2 h2 {
     color: #5C3C12;
     font-weight: 550;
     letter-spacing: 1.5px;
     font-size: 1.8rem;
 }
-.text-section2 p{
+
+.text-section2 p {
     color: #5C3C12;
     font-size: 1.2rem;
-    line-height: 2.5;
+    line-height: 2;
     font-weight: 550;
     letter-spacing: 1px;
     text-align: justify;
-    margin-top:2%;
+    margin-top: 2%;
 }
-#basecamp{
+
+#basecamp {
     font-size: 2.6rem;
     font-weight: 500;
 }
 
+#loading{
+    margin: 10% 0 0 88%;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
+@media(max-width:1440px) {
+    .text-section h2 {
+        font-size: 1.2rem;
+    }
 
+    #fuji {
+        font-size: 2.5rem;
+    }
 
+    .text-section p {
+        font-size: 1rem;
+    }
+
+    .newsImg img {
+        max-width: 800px;
+    }
+    .dots{
+        padding-top: 40%;
+    }
+    .text-section2 h2 {
+        font-size: 1.2rem;
+    }
+    #basecamp{
+        font-size: 2.2rem;
+    }
+    .text-section2 p{
+        font-size: 1rem;
+    }
+    
+}
+
+/* contact 區 */
+
+#contact{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    border: 2px solid red;
+}
+.map{
+    position: absolute;
+    display: flex;
+    width: 80%;
+    height: 65%;
+    border: 2px solid red;
+    left: 10%;
+}
+.time-text{
+    padding-top: 18%;
+    padding-left: 4%;
+    color: #5C3C12;
+    font-weight: 550;
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.5px;
+}
+.time-text h2{
+    font-size: 2.6rem;
+}
+.time-text2{
+    padding-bottom: 4%;
+}
+.time-text3{
+    padding-bottom: 4%;
+}
+.socials{
+    display: flex;
+    gap: 10px;
+}
+#facebook,#line{
+    width: 32px;
+    height: 32px;
+    padding-top: 2px;
+}
+#mail,#instagram{
+    width: 35px;
+}
+@media(max-width:1440px){
+    .time-text{
+        font-size: 1rem;
+        
+    }
+    .time-text{
+        padding-top: 12%;
+    }
+    .time-text h2{
+        font-size: 2.2rem;
+    }
+}
+
+/* footer區 */
+footer{
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background-color: #CCCFBE;
+    border: 2px solid red;
+}
+.connect{
+    position: absolute;
+    display: flex;
+    color: #5C3C12;
+    gap: 200px;
+    border: 2px solid red;
+}
+
+.copyright button{
+    display: block;
+}
 /* 卷軸 */
 html::-webkit-scrollbar {
     width: 10px;
