@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorer戶外裝備</title>
     <link rel="stylesheet" href="./index.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="topbar">
         <div class="navbar">
-            <!-- 漢堡按鈕 -->
-
             <!-- 選單列 -->
             <nav class="navigation">
                 <!-- main btn | ul.menu>li*6>a -->
@@ -23,14 +21,24 @@
                     <li><a href="#contact">CONTACT</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="member"><img src="./image/User.png" alt=""></a></li>
-                    <li><a href="hamburger">
-                            <button class="hamburger">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </button></a></li>
-
+                    <li>
+                        <button class="toggle-menu">
+                            <span></span>
+                        </button>
+                    </li>
                 </ul>
+                <!-- 漢堡按鈕的下拉菜單 -->
+                <div id="menu" class="">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#">SHOP</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">MEMBER</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </nav>
         </div>
 
@@ -93,47 +101,48 @@
                     <!-- 第一行 -->
                     <div class="gearRow">
                         <div class="gearItem">
-                            <img src="./image/typeIcon1.svg" alt="">
+                            <img src="./image/typeIcon1.svg" alt="" data-img="./image/tent.jpg">
                             <h3>帳篷 Tent</h3>
                         </div>
                         <div class="gearItem">
-                            <img src="./image/typeIcon2.svg" alt="">
+                            <img src="./image/typeIcon2.svg" alt="" data-img="./image/sleepingpad.jpg">
                             <h3>睡墊 Sleeping Pad</h3>
                         </div>
                     </div>
                     <!-- 第二行 -->
                     <div class="gearRow">
                         <div class="gearItem">
-                            <img src="./image/typeIcon3.svg" alt="">
+                            <img src="./image/typeIcon3.svg" alt="" data-img="./image/table.jpg">
                             <h3>桌椅 Table&Chair</h3>
                         </div>
                         <div class="gearItem">
-                            <img src="./image/typeIcon4.svg" alt="">
+                            <img src="./image/typeIcon4.svg" alt="" data-img="./image/cooker.jpg">
                             <h3>炊具 Cooker</h3>
                         </div>
                     </div>
                     <!-- 第三行 -->
                     <div class="gearRow">
                         <div class="gearItem">
-                            <img src="./image/typeIcon5.svg" alt="">
+                            <img src="./image/typeIcon6.svg" alt="" data-img="./image/canopy.jpg">
                             <h3>天幕 Canopy</h3>
                         </div>
                         <div class="gearItem">
-                            <img src="./image/typeIcon6.svg" alt="">
+                            <img src="./image/typeIcon5.svg" alt="" data-img="./image/newsGear1.jpg">
                             <h3>睡袋 Sleeping Bag</h3>
                         </div>
                     </div>
                     <!-- 第四行 -->
                     <div class="gearRow">
                         <div class="gearItem">
-                            <img src="./image/typeIcon7.svg" alt="">
+                            <img src="./image/typeIcon7.svg" alt="" data-img="./image/newsGear2.jpg">
                             <h3>登山背包 Backpack</h3>
                         </div>
                         <div class="gearItem">
-                            <img src="./image/typeIcon8.svg" alt="">
+                            <img src="./image/typeIcon8.svg" alt="" data-img="./image/shopPic.jpg">
                             <h3>其他 Others</h3>
                         </div>
                     </div>
+                    <p>Go shop >>></p>
                 </div>
             </div>
         </section>
@@ -174,6 +183,9 @@
             <header class="title">
                 <h2>CONTACT</h2>
             </header>
+            <div class="circle">
+                <img src="./image/circle.svg" alt="">
+            </div>
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7696120334126!2d121.525618!3d25.0418915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1726423010407!5m2!1szh-TW!2stw"
@@ -202,63 +214,40 @@
         </section>
 
         <footer>
-            <div class="connect">
-                <div class="brand">
-                    <p>BRAND</p>
-                    <p>TerraVibe</p>
-                    <p>AlpineCo</p>
-                    <p>Ventura</p>
-                    <p>EverTrek</p>
-                </div>
-                <div class="explore">
-                    <p>EXPLORE</p>
-                    <p>shop</p>
-                    <p>news</p>
-                    <p>member</p>
-                    <p>about</p>
-                </div>
-                <div class="media">
-                    <p>MEDIA</p>
-                    <p>email</p>
-                    <p>facebook</p>
-                    <p>instagram</p>
-                    <p>line</p>
-                </div>
-                <div class="copyright">
-                    <button id="confirm2">確認日期</button>
-                    <button id="rule">租借守則</button>
-                    <p>© 2024 . All Rights Reserved.</p>
+            <div class="connect-center">
+                <div class="connect">
+                    <div class="brand">
+                        <p id="footer-title">BRAND</p>
+                        <p>Terravibe</p>
+                        <p>Alpineco</p>
+                        <p>Ventura</p>
+                        <p>Evertrek</p>
+                    </div>
+                    <div class="explore">
+                        <p id="footer-title">EXPLORE</p>
+                        <p>shop</p>
+                        <p>news</p>
+                        <p>member</p>
+                        <p>about</p>
+                    </div>
+                    <div class="media">
+                        <p id="footer-title">MEDIA</p>
+                        <p>email</p>
+                        <p>facebook</p>
+                        <p>instagram</p>
+                        <p>line</p>
+                    </div>
+                    <div class="copyright">
+                        <button id="confirm2">確認日期</button>
+                        <button id="rule">租借守則</button>
+                        <p>Copyright © 2024 Explorer Inc.</p>
+                    </div>
                 </div>
             </div>
-
-
         </footer>
-
-
-
-        <script>
-            let montain = document.getElementById("montain");
-            let text = document.getElementById("title");
-            let text1 = document.getElementById("title1");
-
-            window.addEventListener('scroll', function () {
-                // Stock valeur scrollY dans une variable à chaque fois qu'on scroll
-                let value = window.scrollY;
-                console.log(value);
-
-                text.style.transform = `translateY(${value}px)`;
-                text1.style.transform = `translateY(${value}px)`;
-
-            })
-
-
-        </script>
     </main>
 
-
-
-
-
+    <script src="./index.js"></script>
 </body>
 
 </html>

@@ -111,27 +111,230 @@ body {
 }
 
 /* 漢堡按鈕的基礎樣式 */
-.hamburger {
-    background: none;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+
+body {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle, #F3F4EC, #F3F4EC);
+    font-size: 13px;
+}
+
+#header {
+    padding: 2rem;
+}
+
+#menu {
+    background: #a9ae9a;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1100;
+}
+
+#menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu.open li:nth-child(1) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+#menu.open li:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+#menu.open li:nth-child(3) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+#menu.open li:nth-child(4) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+#menu.open li:nth-child(5) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+#menu.open li:nth-child(6) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+#menu.open li:nth-child(7) {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+#menu.open li:nth-child(8) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+#menu.open li:nth-child(9) {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+#menu.open li:nth-child(10) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+#menu.open li {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+#menu ul:hover a {
+    opacity: 0.5;
+}
+
+#menu ul a {
+    -webkit-transform: translateZ(0);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#menu ul a:hover {
+    opacity: 1;
+}
+
+#menu .main-nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#menu .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu .main-nav a {
+    color: #ffff;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#menu .main-nav a:first {
+    padding-top: 0;
+}
+
+#menu .menu-footer {
+    padding: 2rem;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+#menu .menu-footer ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu .menu-footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+#menu .menu-footer a {
+    color: #5C3C12;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.toggle-menu {
+    background-color: transparent;
     border: none;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    /* 三條垂直排列 */
-    justify-content: space-between;
-    /* 子元素均勻地分佈 */
-    width: 25px;
-    height: 1.1rem;
+    display: inline-block;
+    float: right;
+    height: 50px;
+    outline: none;
+    padding: 0;
+    pointer-events: initial;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+    z-index: 1110;
 }
 
-/* 漢堡按鈕中每條 bar 的樣式 */
-.hamburger .bar {
-    width: 100%;
-    height: 3px;
+.toggle-menu span {
     background-color: #5C3C12;
-    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: calc(50% - 13px);
+    position: absolute;
+    top: calc(50% - 1px);
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+    width: 26px;
 }
 
+.toggle-menu span:before,
+.toggle-menu span:after {
+    background-color: #5C3C12;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+    width: 26px;
+}
+
+.toggle-menu span:before {
+    top: 7px;
+}
+
+.toggle-menu span:after {
+    top: -7px;
+}
+
+.toggle-menu.active span {
+    background-color: transparent;
+    transition: background 0.2s ease-out;
+}
+
+.toggle-menu.active span:before,
+.toggle-menu.active span:after {
+    transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+
+.toggle-menu.active span:before {
+    top: 0;
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.toggle-menu.active span:after {
+    top: 0;
+    transform: rotate3d(0, 0, 1, 45deg);
+}
 
 /* banner區 */
 #banner {
@@ -179,7 +382,7 @@ body {
     position: absolute;
     color: #FFF;
     right: 4%;
-    top: 50%;
+    top: 57%;
     font-size: 1.2rem;
     z-index: 1;
 
@@ -196,7 +399,7 @@ body {
     }
 
     #title1 {
-        top: 58%;
+        top: 55%;
         font-size: 1rem;
         right: 1%;
     }
@@ -355,6 +558,13 @@ body {
     z-index: 5;
 }
 
+#gearContainer p {
+    color: #5C3C12;
+    font-size: 1.2rem;
+    text-align: right;
+    cursor: pointer;
+}
+
 .gearRow {
     display: flex;
     justify-content: space-between;
@@ -476,7 +686,7 @@ body {
     z-index: 2;
     width: 80%;
     left: 12%;
-    top: 12%;
+    top: 9%;
     border: 2px solid red;
 
 }
@@ -519,7 +729,7 @@ body {
     font-weight: 500;
 }
 
-#loading{
+#loading {
     width: 13%;
     margin: 10% 0 0 106%;
     text-decoration: underline;
@@ -528,6 +738,10 @@ body {
 }
 
 @media(max-width:1440px) {
+    .newsArea {
+        height: 78%;
+    }
+
     .text-section h2 {
         font-size: 1.2rem;
     }
@@ -543,39 +757,70 @@ body {
     .newsImg img {
         max-width: 800px;
     }
-    .dots{
-        padding-top: 40%;
+
+    .dots {
+        padding-top: 50%;
     }
+
     .text-section2 h2 {
         font-size: 1.2rem;
     }
-    #basecamp{
+
+    #basecamp {
         font-size: 2.2rem;
     }
-    .text-section2 p{
+
+    .text-section2 p {
         font-size: 1rem;
     }
-    
+
 }
 
 /* contact 區 */
 
-#contact{
+#contact {
     position: relative;
     width: 100%;
     height: 85vh;
     border: 2px solid red;
 }
-.map{
+
+.circle {
+    position: absolute;
+    left: 62%;
+    top: 16%;
+    animation: rotate 10s infinite linear;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        /* 初始角度 */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* 完全旋轉一圈 */
+    }
+}
+
+.circle img {
+    width: 150px;
+}
+
+.map {
     position: absolute;
     display: flex;
     width: 80%;
     height: 65%;
     border: 2px solid red;
     left: 10%;
+    z-index: 2;
 }
-.time-text{
-    padding-top: 18%;
+
+.time-text {
+    padding-top: 12%;
     padding-left: 4%;
     color: #5C3C12;
     font-weight: 550;
@@ -583,59 +828,107 @@ body {
     line-height: 2;
     letter-spacing: 1.5px;
 }
-.time-text h2{
+
+.time-text h2 {
     font-size: 2.6rem;
 }
-.time-text2{
+
+.time-text2 {
     padding-bottom: 4%;
 }
-.time-text3{
+
+.time-text3 {
     padding-bottom: 4%;
 }
-.socials{
+
+.socials {
     display: flex;
     gap: 10px;
 }
-#facebook,#line{
+
+#facebook,
+#line {
     width: 32px;
     height: 32px;
     padding-top: 2px;
 }
-#mail,#instagram{
+
+#mail,
+#instagram {
     width: 35px;
 }
-@media(max-width:1440px){
-    .time-text{
+
+@media(max-width:1440px) {
+    .time-text {
         font-size: 1rem;
-        
+
     }
-    .time-text{
+
+    .time-text {
         padding-top: 12%;
     }
-    .time-text h2{
+
+    .time-text h2 {
         font-size: 2.2rem;
     }
+
+    .circle img {}
+
 }
 
 /* footer區 */
-footer{
+footer {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 25vh;
     background-color: #CCCFBE;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
-.connect{
+
+.connect-center {
+    display: flex;
+    justify-content: center;
+}
+
+.connect {
     position: absolute;
     display: flex;
     color: #5C3C12;
-    gap: 200px;
-    border: 2px solid red;
+    gap: 170px;
+    line-height: 2;
+    top: 18%;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 550;
+    /* border: 2px solid red; */
 }
 
-.copyright button{
-    display: block;
+.connect p {
+    cursor: pointer;
 }
+
+#footer-title {
+    padding-bottom: 25%;
+}
+
+.copyright p {
+    font-size: 0.8rem;
+}
+
+.copyright button {
+    margin: 7%;
+    padding: 2% 0;
+    width: 75%;
+    color: #5C3C12;
+    display: block;
+    background-color: #CCCFBE;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #5C3C12;
+    cursor: pointer;
+    transition: 0.6;
+}
+
 /* 卷軸 */
 html::-webkit-scrollbar {
     width: 10px;
