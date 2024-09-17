@@ -110,7 +110,7 @@ body {
     /* 將圖片與文字垂直對齊 */
 }
 
-/* 漢堡按鈕的基礎樣式 */
+/* 漢堡按鈕 */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
 
 body {
@@ -399,7 +399,7 @@ body {
     }
 
     #title1 {
-        top: 55%;
+        top: 58%;
         font-size: 1rem;
         right: 1%;
     }
@@ -490,7 +490,7 @@ body {
     position: relative;
     width: 100%;
     height: 110vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #shopPic {
@@ -611,7 +611,7 @@ body {
     position: relative;
     width: 100%;
     height: 140vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .newsArea {
@@ -629,7 +629,7 @@ body {
     width: 80%;
     left: 12%;
     top: 6%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .carousel-1 {
@@ -648,7 +648,8 @@ body {
     color: #5C3C12;
     font-weight: 550;
     letter-spacing: 1.5px;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    margin-top: 5%;
 }
 
 .text-section p {
@@ -658,27 +659,39 @@ body {
     font-weight: 550;
     letter-spacing: 1px;
     text-align: justify;
-    margin-top: 10%;
+    margin-top: 9%;
 }
 
-#fuji {
-    font-size: 3rem;
+.newsImg{
+    width: 75%;
+    height: 550px;
+    margin-left: 8%;
+    /* border: 2px solid red; */
 }
 
 .newsImg img {
     width: 100%;
-    max-width: 1100px;
-    height: 95%;
-    padding-left: 8%;
+    height: 100%;
     object-fit: cover;
 }
 
 .dots {
     color: #5C3C12;
     font-size: 24px;
-    letter-spacing: 12px;
+    letter-spacing: 45px;
     text-align: center;
-    padding-top: 55%
+    padding-top: 55%;
+    padding-left: 10%;
+    
+}
+
+.prev-arrow, .next-arrow{
+    cursor: pointer;
+}
+
+.prev-arrow:hover,.next-arrow:hover{
+    color: #C97200;
+    font-size: 30px;
 }
 
 .gearNews {
@@ -686,8 +699,8 @@ body {
     z-index: 2;
     width: 80%;
     left: 12%;
-    top: 9%;
-    border: 2px solid red;
+    top: 11%;
+    /* border: 2px solid red; */
 
 }
 
@@ -704,6 +717,7 @@ body {
 
 .text-section2 {
     width: 50%;
+    margin-left: 2%;
 }
 
 .text-section2 h2 {
@@ -721,7 +735,7 @@ body {
     letter-spacing: 1px;
     text-align: justify;
     margin-top: 2%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #basecamp {
@@ -734,28 +748,24 @@ body {
     margin: 10% 0 0 106%;
     text-decoration: underline;
     cursor: pointer;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 @media(max-width:1440px) {
     .newsArea {
-        height: 78%;
+        height: 80%;
     }
 
     .text-section h2 {
-        font-size: 1.2rem;
-    }
-
-    #fuji {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
     }
 
     .text-section p {
         font-size: 1rem;
     }
 
-    .newsImg img {
-        max-width: 800px;
+    .newsImg{
+        height: 450px;
     }
 
     .dots {
@@ -763,7 +773,7 @@ body {
     }
 
     .text-section2 h2 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     #basecamp {
@@ -782,7 +792,7 @@ body {
     position: relative;
     width: 100%;
     height: 85vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .circle {
@@ -814,7 +824,7 @@ body {
     display: flex;
     width: 80%;
     height: 65%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     left: 10%;
     z-index: 2;
 }
@@ -872,7 +882,14 @@ body {
         font-size: 2.2rem;
     }
 
-    .circle img {}
+    .circle img {
+        width: 140px;
+    }
+
+    .circle {
+        left: 61%;
+        top: 15%;
+    }
 
 }
 
@@ -896,7 +913,7 @@ footer {
     color: #5C3C12;
     gap: 170px;
     line-height: 2;
-    top: 18%;
+    top: 12%;
     letter-spacing: 2px;
     text-align: center;
     font-weight: 550;
@@ -912,7 +929,7 @@ footer {
 }
 
 .copyright p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .copyright button {
