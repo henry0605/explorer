@@ -44,7 +44,10 @@ $(document).ready(function () {
         var newSrc = $(this).data('img');
 
         // 更換 #shopPic 的 src
-        $('#shopPic').attr('src', newSrc);
+        // 淡出圖片，然後更換 src，再淡入
+        $('#shopPic').fadeOut(300, function () {
+            $(this).attr('src', newSrc).fadeIn(300);
+        });
     });
 });
 

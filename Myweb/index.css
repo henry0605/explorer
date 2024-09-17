@@ -77,11 +77,8 @@ body {
 /* navbar */
 .navigation .menu {
     display: flex;
-    margin: 15px 0px;
-    /* 控制父層的外距 */
     padding: 10px;
     justify-content: flex-end;
-
 }
 
 .navigation .menu a {
@@ -108,6 +105,15 @@ body {
     /* 保持圖片比例 */
     vertical-align: middle;
     /* 將圖片與文字垂直對齊 */
+}
+
+#brandLogo{
+    margin-right: auto;
+}
+
+#brandLogo img {
+    width: 50px;
+    height: auto;
 }
 
 /* 漢堡按鈕 */
@@ -662,7 +668,7 @@ body {
     margin-top: 9%;
 }
 
-.newsImg{
+.newsImg {
     width: 75%;
     height: 550px;
     margin-left: 8%;
@@ -682,16 +688,18 @@ body {
     text-align: center;
     padding-top: 55%;
     padding-left: 10%;
-    
+
 }
 
-.prev-arrow, .next-arrow{
+.prev-arrow,
+.next-arrow {
     cursor: pointer;
 }
 
-.prev-arrow:hover,.next-arrow:hover{
+.prev-arrow:hover,
+.next-arrow:hover {
     color: #C97200;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 .gearNews {
@@ -744,9 +752,10 @@ body {
 }
 
 #loading {
-    width: 13%;
-    margin: 10% 0 0 106%;
-    text-decoration: underline;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 25%;
+    margin: 10% 0 0 90%;
     cursor: pointer;
     /* border: 2px solid red; */
 }
@@ -764,7 +773,7 @@ body {
         font-size: 1rem;
     }
 
-    .newsImg{
+    .newsImg {
         height: 450px;
     }
 
