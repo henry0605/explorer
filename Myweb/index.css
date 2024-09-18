@@ -268,11 +268,13 @@ body {
 }
 
 #menu-btn{
-    width: 130%;
+    width: 110%;
     height: 7vh;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 1%;
-    color: #444444;
+    color: #C97200;
+    background-color: #ffff;
+    border: #a9ae9a;
     cursor: pointer;
 }
 

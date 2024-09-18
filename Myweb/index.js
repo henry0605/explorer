@@ -82,6 +82,7 @@ const carouselData = [
 
 $(document).ready(function () {
     let currentIndex = 0; // 當前顯示的索引
+    let carouselInterval;
 
     // 更新 carousel 的內容
     function updateCarousel(index) {
@@ -90,15 +91,36 @@ $(document).ready(function () {
         $('#news-image').attr('src', carouselData[index].imgSrc);
     }
 
+    // 開始自動輪播
+    function startAutoPlay() {
+        carouselInterval = setInterval(function () {
+            currentIndex = (currentIndex < carouselData.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel(currentIndex);
+        }, 3000); // 每3秒換一次
+    }
+
+    // 停止自動輪播
+    function stopAutoPlay() {
+        clearInterval(carouselInterval);
+    }
+
     // 點擊左箭頭事件
     $('.prev-arrow').click(function () {
+        stopAutoPlay();
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselData.length - 1;
         updateCarousel(currentIndex);
+        startAutoPlay(); // 重置輪播計時
     });
 
     // 點擊右箭頭事件
     $('.next-arrow').click(function () {
+        stopAutoPlay();
         currentIndex = (currentIndex < carouselData.length - 1) ? currentIndex + 1 : 0;
         updateCarousel(currentIndex);
+        startAutoPlay(); // 重置輪播計時
     });
+
+    // 初始化
+    updateCarousel(currentIndex);
+    startAutoPlay(); // 頁面載入後開始自動輪播
 });
