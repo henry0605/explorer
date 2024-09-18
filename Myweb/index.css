@@ -136,7 +136,7 @@ body {
     opacity: 0;
     overflow: hidden;
     position: fixed;
-    text-align: center;
+    /* text-align: center; */
     top: 0;
     transition: all 0.7s ease-in-out;
     visibility: hidden;
@@ -208,8 +208,21 @@ body {
     animation-name: fadeInUp;
 }
 
+#menu ul a {
+    opacity: 1;
+    transition: opacity 0.8s ease; /* 加入平滑過渡效果 */
+}
+
 #menu ul:hover a {
     opacity: 0.5;
+}
+
+#menu ul a:hover {
+    opacity: 1;
+}
+
+.main-nav ul a:hover ~ a {
+    opacity: 0.5; /* 讓懸停的其他兄弟元素也變半透明 */
 }
 
 #menu ul a {
@@ -217,60 +230,75 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-#menu ul a:hover {
-    opacity: 1;
-}
+
 
 #menu .main-nav {
+    display: flex;
     position: relative;
-    top: 50%;
+    left: 15%;
+    top: 45%;
     transform: translateY(-50%);
 }
 
 #menu .main-nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 0 2%;
 }
 
 #menu .main-nav a {
     color: #ffff;
     display: block;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    /* font-weight: bold; */
     padding: 1rem 1rem;
     text-decoration: none;
     text-transform: uppercase;
+    /* border: 2px solid red; */
+}
+
+.chinese{
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.more{
+    font-size: 1rem;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+#menu-btn{
+    width: 130%;
+    height: 7vh;
+    font-size: 1.3rem;
+    padding: 1%;
+    color: #444444;
+    cursor: pointer;
+}
+
+#menu-btn:hover{
+    border: 2px solid #ffff;
+    background-color: #a9ae9a;
+    color: #ffff;
+}
+
+.main-nav-third{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.main-nav-third a{
+    margin: -30% 0;
+    /* border: 2px solid red; */
+
+}
+.third{
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 #menu .main-nav a:first {
     padding-top: 0;
-}
-
-#menu .menu-footer {
-    padding: 2rem;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-}
-
-#menu .menu-footer ul {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu .menu-footer ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-#menu .menu-footer a {
-    color: #5C3C12;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
 .toggle-menu {
@@ -475,7 +503,7 @@ body {
     cursor: pointer;
 }
 
-#confirm {
+#date-btn {
     width: 8%;
     height: 20%;
     color: #5C3C12;
@@ -487,8 +515,10 @@ body {
     transition: 0.6;
 }
 
-#confirm:hover {
-    background-color: #a9ae9a;
+#date-btn:hover {
+    border: 2px solid #C97200;
+    background-color: #CCCFBE;
+    color: #C97200;
 }
 
 /* shop區 */
@@ -571,6 +601,10 @@ body {
     cursor: pointer;
 }
 
+#gearContainer p:hover{
+    color: #C97200;
+}
+
 .gearRow {
     display: flex;
     justify-content: space-between;
@@ -616,7 +650,7 @@ body {
 #news {
     position: relative;
     width: 100%;
-    height: 140vh;
+    height: 130vh;
     /* border: 2px solid red; */
 }
 
@@ -683,10 +717,10 @@ body {
 
 .dots {
     color: #5C3C12;
-    font-size: 24px;
+    font-size: 32px;
     letter-spacing: 45px;
     text-align: center;
-    padding-top: 55%;
+    padding-top: 50%;
     padding-left: 10%;
 
 }
@@ -699,7 +733,6 @@ body {
 .prev-arrow:hover,
 .next-arrow:hover {
     color: #C97200;
-    font-size: 32px;
 }
 
 .gearNews {
@@ -760,6 +793,10 @@ body {
     /* border: 2px solid red; */
 }
 
+#loading:hover{
+    color: #C97200;
+}
+
 @media(max-width:1440px) {
     .newsArea {
         height: 80%;
@@ -807,7 +844,7 @@ body {
 .circle {
     position: absolute;
     left: 62%;
-    top: 16%;
+    top: 12%;
     animation: rotate 10s infinite linear;
     z-index: 1;
 }
@@ -863,6 +900,7 @@ body {
 .socials {
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 
 #facebook,

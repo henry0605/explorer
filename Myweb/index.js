@@ -64,7 +64,7 @@ const carouselData = [
         imgSrc: "./image/carousel-2.jpg"
     },
     {
-        artTitle: "台北大縱走 - 都市的冒險",
+        artTitle: "台北大縱走 - 都市冒險",
         article: "台北大縱走活動成功吸引了大量登山愛好者。這條全長約30公里的路線從陽明山延伸至台北市郊，途經多個風景名勝。參加者在挑戰自我的同時，享受了台北獨特的山城景觀...",
         imgSrc: "./image/carousel-3.jpg"
     },
