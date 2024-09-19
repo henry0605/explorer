@@ -75,6 +75,14 @@ body {
 }
 
 /* navbar */
+#topbar{
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: #f3f4ec;
+    z-index: 1000;
+}
+
 .navigation .menu {
     display: flex;
     padding: 10px;
