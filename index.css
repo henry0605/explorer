@@ -984,13 +984,20 @@ footer {
 #footer-title {
     padding-bottom: 25%;
 }
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
 
 .copyright p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .copyright button {
-    margin: 7%;
+    margin: 3%;
     padding: 2% 0;
     width: 75%;
     color: #5C3C12;
@@ -1001,6 +1008,10 @@ footer {
     border: 2px solid #5C3C12;
     cursor: pointer;
     transition: 0.6;
+}
+.copyright button:hover{
+    border: 2px solid #C97200;
+    color: #C97200;
 }
 
 /* 卷軸 */
