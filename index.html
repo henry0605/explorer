@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorer戶外裝備</title>
     <link rel="icon" href="./favicon.ico">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <link rel="stylesheet" href="./index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="text/babel" src="./Footer_element/Footer.jsx"></script>
+    <link rel="stylesheet" href="./Footer_element/Footer.css">
 
 </head>
 
@@ -19,7 +25,7 @@
             <nav class="navigation">
                 <!-- main btn | ul.menu>li*6>a -->
                 <ul class="menu">
-                    <li id="brandLogo"><a href="#index.html"><img src="./image/explorer-logo.png" alt=""></a></li>
+                    <li id="brandLogo"><a href="index.html"><img src="./image/explorer-logo.png" alt=""></a></li>
                     <li><a href="#shop">SHOP</a></li>
                     <li><a href="#news">NEWS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
@@ -55,9 +61,12 @@
                             <li><a href="#"><span class="third">租賃守則</span></a></li>
                         </ul>
                         <ul class="main-nav-forth">
-                            <li><a href="#"><span class="ham-icon-1"><i class="fa-solid fa-envelope-open"></i></span></a></li>
-                            <li><a href="#"><span class="ham-icon"><i class="fa-brands fa-facebook-f"></i></span></a></li>
-                            <li><a href="#"><span class="ham-icon"><i class="fa-brands fa-instagram"></i></span></a></li>
+                            <li><a href="#"><span class="ham-icon-1"><i
+                                            class="fa-solid fa-envelope-open"></i></span></a></li>
+                            <li><a href="#"><span class="ham-icon"><i class="fa-brands fa-facebook-f"></i></span></a>
+                            </li>
+                            <li><a href="#"><span class="ham-icon"><i class="fa-brands fa-instagram"></i></span></a>
+                            </li>
                             <li><a href="#"><span class="ham-icon"><i class="fa-brands fa-line"></i></span></a></li>
                         </ul>
                     </nav>
@@ -180,7 +189,8 @@
                 <div class="carousel-1">
                     <div class="text-section">
                         <h2 id="artTitle">富士山 - 迎來旅遊高峰</h2>
-                        <p id="article">隨著日本旅遊業的恢復，富士山再次成為國內外遊客的熱點。每年7月至9月的登山季，吸引了成千上萬的登山者和觀光客前來。當局提醒登山者做好充分準備，攜帶合適裝備以應對...</p>
+                        <p id="article">
+                            隨著日本旅遊業的恢復，富士山再次成為國內外遊客的熱點。每年7月至9月的登山季，吸引了成千上萬的登山者和觀光客前來。當局提醒登山者做好充分準備，攜帶合適裝備以應對...</p>
                         <div class="dots">
                             <span class="prev-arrow"><i class="fa-solid fa-angles-left"></i></span>
                             <span class="next-arrow"><i class="fa-solid fa-angles-right"></i></span>
@@ -238,41 +248,19 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div class="connect-center">
-                <div class="connect">
-                    <div class="brand">
-                        <p id="footer-title">BRAND</p>
-                        <p>Terravibe</p>
-                        <p>Alpineco</p>
-                        <p>Ventura</p>
-                        <p>Evertrek</p>
-                    </div>
-                    <div class="explore">
-                        <p id="footer-title">EXPLORE</p>
-                        <p>shop</p>
-                        <p>news</p>
-                        <p>member</p>
-                        <p>about</p>
-                    </div>
-                    <div class="media">
-                        <p id="footer-title">MEDIA</p>
-                        <p>email</p>
-                        <p>facebook</p>
-                        <p>instagram</p>
-                        <p>line</p>
-                    </div>
-                    <div class="copyright">
-                        <button>裝備租借</button>
-                        <button>租借守則</button>
-                        <p>Copyright © 2024 Explorer Inc.</p>
-                        <p>此網站為練習網站，非商業用途</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
+
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <Footer />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />)
+    </script>
 
     <script src="./index.js"></script>
 </body>
