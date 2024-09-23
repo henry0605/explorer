@@ -405,7 +405,7 @@ body {
 /* 登入區 */
 #login {
     position: absolute;
-    width: 23%;
+    width: 25%;
     height: 70%;
     top: 50%;
     left: 50%;
@@ -479,13 +479,18 @@ form button:hover{
 }
 
 .fast-login p{
+font-weight: 550;
+padding: 0 2%;
+}
+
+form button{
     padding: 0 10px;
     font-size: 0.9rem;
     font-weight: 550;
 }
 
 .line-1,.line-2{
-    width: 27%;
+    width: 26%;
     height: 9%;
     background-color: #5C3C12;
 }
@@ -494,13 +499,23 @@ form button:hover{
     align-items: center;
     justify-content: center;
     margin-top: 3%;
+    gap:25px;
 }
 
 #login img{
     width: 30px;
     height: auto;
-    margin: 0 20%;
     cursor: pointer;
+}
+
+@media (max-width:1440px){
+    #login h2{
+        font-size: 2rem;
+    }
+    #login input::placeholder{
+        font-size: 0.8rem;
+    }
+
 }
 
 /* 卷軸 */
