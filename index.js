@@ -9,7 +9,7 @@ $(document).ready(function () {
     // 當點擊導航欄的鏈接時
     $('.navbar a').click(function (event) {
         // 阻止默認的跳轉動作
-        event.preventDefault();
+        // event.preventDefault();
 
         // 獲取 href 的目標位置
         var target = $(this).attr('href');

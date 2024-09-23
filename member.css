@@ -1,0 +1,524 @@
+@charset "UTF-8";
+/* UTF-8一定要在行數1 */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 一定要在第二行 */
+@font-face {
+    font-family: Bridgers;
+    src: url(../webfons/Bridgers\ Brush.ttf);
+}
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 不累加內距padding與邊框border */
+}
+
+
+* {
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* navbar */
+#topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #CCCFBE;
+    z-index: 1000;
+}
+
+.navigation .menu {
+    display: flex;
+    padding: 4px;
+    justify-content: flex-end;
+}
+
+.navigation .menu a {
+    color: #5C3C12;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 20px;
+    /* 控制子層的外距 */
+    text-decoration: none;
+    /* 移除文字底線 */
+    transition: 0.6s;
+}
+
+.navigation .menu a:hover {
+    color: #C97200;
+
+}
+
+.navigation .menu li {
+    display: flex;
+    align-items: center;
+    /* 使圖片和文字在列表項內垂直居中對齊 */
+    justify-content: space-evenly;
+}
+
+.navigation .menu img {
+    height: 1.5rem;
+    width: auto;
+}
+
+#brandLogo {
+    margin-right: auto;
+}
+
+#brandLogo img {
+    width: 50px;
+    height: auto;
+}
+
+#user,
+#cart {
+    font-size: 1.4rem;
+}
+
+/* 漢堡按鈕 */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+
+body {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle, #F3F4EC, #F3F4EC);
+    font-size: 13px;
+}
+
+#header {
+    padding: 2rem;
+}
+
+#menu {
+    background: #a9ae9a;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    /* text-align: center; */
+    top: 0;
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1100;
+}
+
+#menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu.open li:nth-child(1) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+#menu.open li:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+#menu.open li:nth-child(3) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+#menu.open li:nth-child(4) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+#menu.open li:nth-child(5) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+#menu.open li:nth-child(6) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+#menu.open li:nth-child(7) {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+#menu.open li:nth-child(8) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+#menu.open li:nth-child(9) {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+#menu.open li:nth-child(10) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+#menu.open li {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+#menu ul a {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    /* 加入平滑過渡效果 */
+}
+
+#menu ul:hover a {
+    opacity: 0.5;
+}
+
+#menu ul a:hover {
+    opacity: 1;
+}
+
+.main-nav ul a:hover~a {
+    opacity: 0.5;
+    /* 讓懸停的其他兄弟元素也變半透明 */
+}
+
+#menu ul a {
+    -webkit-transform: translateZ(0);
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+#menu .main-nav {
+    display: flex;
+    position: relative;
+    left: 15%;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+#menu .main-nav ul {
+    list-style: none;
+    padding: 0 2%;
+}
+
+#menu .main-nav a {
+    color: #ffff;
+    display: block;
+    font-size: 2rem;
+    /* font-weight: bold; */
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* border: 2px solid red; */
+}
+
+.chinese {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.more {
+    font-size: 1rem;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+#menu-btn {
+    width: 110%;
+    height: 7vh;
+    font-size: 1rem;
+    padding: 1%;
+    color: #ffff;
+    background-color: #a9ae9a;
+    border: 2px solid #ffff;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+#menu-btn:hover {
+    border: 2px solid #C97200;
+    background-color: #ffff;
+    color: #C97200;
+}
+
+.main-nav-third {
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.main-nav-third a {
+    margin: -30% 0;
+    /* border: 2px solid red; */
+
+}
+
+.third {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.ham-icon-1 {
+    font-size: 1.2rem;
+}
+
+.ham-icon {
+    font-size: 1.5rem;
+}
+
+.main-nav-forth a {
+    margin: -27% 0;
+}
+
+#menu .main-nav a:first {
+    padding-top: 0;
+}
+
+.toggle-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 50px;
+    outline: none;
+    padding: 0;
+    pointer-events: initial;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+    z-index: 1110;
+}
+
+.toggle-menu span {
+    background-color: #5C3C12;
+    content: "";
+    display: block;
+    height: 2px;
+    left: calc(50% - 13px);
+    position: absolute;
+    top: calc(50% - 1px);
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+    width: 26px;
+}
+
+.toggle-menu span:before,
+.toggle-menu span:after {
+    background-color: #5C3C12;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+    width: 26px;
+}
+
+.toggle-menu span:before {
+    top: 7px;
+}
+
+.toggle-menu span:after {
+    top: -7px;
+}
+
+.toggle-menu.active span {
+    background-color: transparent;
+    transition: background 0.2s ease-out;
+}
+
+.toggle-menu.active span:before,
+.toggle-menu.active span:after {
+    transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+
+.toggle-menu.active span:before {
+    top: 0;
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.toggle-menu.active span:after {
+    top: 0;
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+
+/* 背景圖 */
+#backgroud {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#backgroud img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/* 登入區 */
+#login {
+    position: absolute;
+    width: 23%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F3F4EC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#login h2 {
+    margin-top:10%;
+    font-size: 3rem;
+    color: #5C3C12;
+    letter-spacing: 5px;
+    /* border: 2px solid red; */
+}
+
+.line{
+    margin-top: 2%;
+    width: 70%;
+    height: 0.5%;
+    background-color: #5C3C12;
+}
+
+form{
+    width: 70%;
+    margin-top: 5%;
+}
+
+#login input{
+    background-color: #F3F4EC;
+    border: none;
+    border-bottom:2px solid #5C3C12;
+    outline: none;
+    width: 100%;
+    padding: 3% 0;
+    margin: 5% 0;
+}
+
+#login input::placeholder{
+    font-size: 1rem;
+}
+
+form button{
+    margin-top: 8%;
+    width: 100%;
+    height: 30%;
+    font-size: 1.2rem;
+    background-color: #5C3C12;
+    border:2px solid #5C3C12;
+    color: #ffff;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+form button:hover{
+    background-color: #F3F4EC;
+    color: #C97200;
+    border: 2px solid #C97200;
+}
+
+.fast-login{
+    margin-top: 12%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5C3C12;
+}
+
+.fast-login p{
+    padding: 0 10px;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+
+.line-1,.line-2{
+    width: 27%;
+    height: 9%;
+    background-color: #5C3C12;
+}
+.fast-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+#login img{
+    width: 30px;
+    height: auto;
+    margin: 0 20%;
+    cursor: pointer;
+}
+
+/* 卷軸 */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #ffff;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #85942D;
+    height: 5px;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #c97200 #ffff;
+}
