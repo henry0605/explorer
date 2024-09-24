@@ -2,6 +2,13 @@
 $('.toggle-menu').click(function () {
     $(this).toggleClass('active');
     $('#menu').toggleClass('open');
+
+    // 切換禁止滾動的功能
+    if ($('#menu').hasClass('open')) {
+        $('body').addClass('no-scroll'); // 禁止滾動
+    } else {
+        $('body').removeClass('no-scroll'); // 恢復滾動
+    }
 });
 
 //navbar點擊
@@ -23,16 +30,18 @@ $(document).ready(function () {
 
 //banner滾動視差
 let montain = document.getElementById("montain");
-let text = document.getElementById("title");
-let text1 = document.getElementById("title1");
+let text1 = document.getElementById("title-1");
+let text2 = document.getElementById("title-2");
+let text3 = document.getElementById("title-3");
 
 window.addEventListener('scroll', function () {
     // Stock valeur scrollY dans une variable à chaque fois qu'on scroll
     let value = window.scrollY;
     console.log(value);
 
-    text.style.transform = `translateY(${value}px)`;
     text1.style.transform = `translateY(${value}px)`;
+    text2.style.transform = `translateY(${value}px)`;
+    text3.style.transform = `translateY(${value}px)`;
 
 })
 

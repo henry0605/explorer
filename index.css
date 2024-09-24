@@ -67,6 +67,10 @@ body {
     /* 讓內容居中顯示 */
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 /* 標題共用區 */
 .title {
     color: #C97200;
@@ -429,38 +433,51 @@ body {
     z-index: 1000;
 }
 
+#title-1 {
+    position: absolute;
+    color: #C97200;
+    left: 2%;
+    top: 140px;
+    font-size: 7rem;
+    z-index: 1;
+}
 
-#title {
+#title-2 {
     position: absolute;
     color: #FFF;
     left: 2%;
-    top: 100px;
+    top: 300px;
     font-size: 7rem;
-    z-index: 1;
-
-}
-
-#title1 {
-    position: absolute;
-    color: #FFF;
-    right: 4%;
-    top: 57%;
-    font-size: 1.2rem;
-    z-index: 1;
-
-}
-
-#road {
     z-index: 2;
 
 }
 
+#title-3 {
+    position: absolute;
+    color: #FFF;
+    right: 4%;
+    top: 60%;
+    font-size: 1.2rem;
+    z-index: 2;
+
+}
+
+#montain{
+    margin-top:12%;
+    z-index: 2;
+}
+
+#road {
+    z-index: 3;
+
+}
+
 @media(max-width:1440px) {
-    #title {
+    #title-1,#title-2 {
         font-size: 5.5rem;
     }
 
-    #title1 {
+    #title-3 {
         top: 58%;
         font-size: 1rem;
         right: 1%;
